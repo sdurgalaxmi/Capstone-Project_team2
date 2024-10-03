@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         CHART_PATH = '.'                   // Path to Helm chart (root level)
-        NAMESPACE = 'group3-project'        // Kubernetes namespace
+        NAMESPACE = 'team2-project'        // Kubernetes namespace
     }
 
     stages {
@@ -12,7 +12,7 @@ pipeline {
                 script {
                     checkout([$class: 'GitSCM', 
                         branches: [[name: '*/main']], // Adjust this if you're using a different branch
-                        userRemoteConfigs: [[url: 'https://github.com/charlesprakash-git/Capstone-Project.git']]
+                        userRemoteConfigs: [[url: 'https://github.com/sdurgalaxmi/Capstone-Project_team2']]
                     ])
                 }
             }
